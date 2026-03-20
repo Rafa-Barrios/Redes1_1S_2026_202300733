@@ -50,8 +50,7 @@ La implementación se realizó en **Cisco Packet Tracer 8.0**, utilizando switch
 
 ## Topología General
 
-> 📸 **IMAGEN REQUERIDA:** Inserta aquí una captura de la topología completa con los 4 edificios visibles.  
-> **Nombre sugerido:** `topologia_completa.png`
+`topologia_completa.png`
 
 La topología del campus conecta los cuatro edificios de la siguiente manera:
 
@@ -84,8 +83,7 @@ La topología del campus conecta los cuatro edificios de la siguiente manera:
 
 ### Edificio A
 
-> 📸 **IMAGEN REQUERIDA:** Captura del Edificio A con todos sus dispositivos y conexiones visibles.  
-> **Nombre sugerido:** `edificio_a.png`
+`edificio_a.png`
 
 **Dispositivos:**
 - SW-A1 (Switch-PT) — Switch de distribución con conexión de fibra al campus
@@ -107,8 +105,7 @@ La topología del campus conecta los cuatro edificios de la siguiente manera:
 
 ### Edificio B
 
-> 📸 **IMAGEN REQUERIDA:** Captura del Edificio B con todos sus dispositivos y conexiones visibles.  
-> **Nombre sugerido:** `edificio_b.png`
+`edificio_b.png`
 
 **Dispositivos:**
 - SW-B1 (Switch-PT) — Switch de agregación
@@ -130,8 +127,7 @@ La topología del campus conecta los cuatro edificios de la siguiente manera:
 
 ### Edificio C
 
-> 📸 **IMAGEN REQUERIDA:** Captura del Edificio C con todos sus dispositivos y conexiones visibles.  
-> **Nombre sugerido:** `edificio_c.png`
+`edificio_c.png`
 
 **Dispositivos:**
 - SW-C4 (Switch-PT) — Punto de interconexión con campus
@@ -153,8 +149,7 @@ La topología del campus conecta los cuatro edificios de la siguiente manera:
 
 ### Edificio D
 
-> 📸 **IMAGEN REQUERIDA:** Captura del Edificio D con todos sus dispositivos y conexiones visibles.  
-> **Nombre sugerido:** `edificio_d.png`
+`edificio_d.png`
 
 **Dispositivos:**
 - SW-D1 (Switch-PT) — IDF Armario de Piso
@@ -180,8 +175,7 @@ La topología del campus conecta los cuatro edificios de la siguiente manera:
 | 43 | LABORATORIO | Laboratorio de Redes | 192.168.43.0/24 |
 | 53 | VISITANTE | Visitantes | 192.168.53.0/24 |
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show vlan brief` en SW-A1.  
-> **Nombre sugerido:** `show_vlan_brief.png`
+`show_vlan_brief.png`
 
 ---
 
@@ -199,8 +193,6 @@ Un dominio de colisión es el segmento de red donde dos dispositivos pueden caus
 | Edificio C | Hub-C1 | 1 | Todo el hub comparte un único dominio (SW-C1, SW-C2, SW-C3 conectados al hub) |
 | Edificio D | Repetidor-D1 | 1 | Extiende el dominio de colisión entre SW-D2 y SW-D3 |
 
-> **Nota:** Los switches crean un dominio de colisión por puerto. Los hubs y repetidores son dispositivos de capa 1 que comparten un único dominio de colisión entre todos sus puertos.
-
 ---
 
 ## Tabla de Dominios de Broadcast
@@ -214,8 +206,6 @@ Un dominio de broadcast abarca todos los dispositivos que reciben un frame de br
 | VLAN 33 | BIBLIOTECA | Biblioteca1-5 (Ed.B), Biblioteca6 (Ed.C), Biblioteca7 (Ed.D) |
 | VLAN 43 | LABORATORIO | Laboratorio2,4 (Ed.A), Laboratorio3 (Ed.D) |
 | VLAN 53 | VISITANTE | Visitantes1,2,3 (Ed.D) |
-
-> **Nota:** No existe enrutamiento inter-VLAN. Cada VLAN es un dominio de broadcast independiente y los dispositivos de diferentes VLANs no pueden comunicarse entre sí.
 
 ---
 
@@ -241,11 +231,9 @@ Un dominio de broadcast abarca todos los dispositivos que reciben un frame de br
 | SW-D1, SW-D2, SW-D3, SW-D4, SW-D5 | Client | C3_NetCore | 2 | proyecto12026 |
 | SW-E1 | Transparent | C3_NetCore | 2 | proyecto12026 |
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show vtp status` en SW-A1.  
-> **Nombre sugerido:** `show_vtp_status_a1.png`
+`show_vtp_status_a1.png`
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show vtp status` en SW-E1 mostrando modo Transparent.  
-> **Nombre sugerido:** `show_vtp_status_e1.png`
+`show_vtp_status_e1.png`
 
 ---
 
@@ -262,11 +250,9 @@ Un dominio de broadcast abarca todos los dispositivos que reciben un frame de br
 | VLAN 43 | SW-A1 | 4096 |
 | VLAN 53 | SW-A1 | 4096 |
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show spanning-tree vlan 13` en SW-A1 mostrando "This bridge is the root".  
-> **Nombre sugerido:** `show_stp_a1.png`
+`show_stp_a1.png`
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show spanning-tree vlan 13` en cualquier switch cliente mostrando que reconoce a SW-A1 como root.  
-> **Nombre sugerido:** `show_stp_cliente.png`
+`show_stp_cliente.png`
 
 ---
 
@@ -281,23 +267,21 @@ Un dominio de broadcast abarca todos los dispositivos que reciben un frame de br
 | Inter-edificios (fibra) | SW-B1 ↔ SW-B2 | PAgP | desirable |
 | Intra-edificio (UTP Cat6) | SW-A2 ↔ SW-A3 | LACP | active/passive |
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show etherchannel summary` en SW-A1 mostrando los Port-channels con flag "P" (activos).  
-> **Nombre sugerido:** `show_etherchannel_a1.png`
+`show etherchannel summary` en SW-A1 mostrando los Port-channels con flag "P" (activos).  
+`show_etherchannel_a1.png`
 
 ---
 
 ## Configuración de Trunks
 
-> 📸 **IMAGEN REQUERIDA:** Captura del comando `show interfaces trunk` en SW-A1.  
-> **Nombre sugerido:** `show_trunk_a1.png`
+`show interfaces trunk` 
+`show_trunk_a1.png`
 
 Los trunks 802.1Q se configuraron en todos los enlaces switch-to-switch con las VLANs permitidas 13, 23, 33, 43, 53.
 
 ---
 
 ## Tabla de Direccionamiento IP
-
-> **Nota:** No existe Default Gateway ya que el proyecto es capa 2 únicamente (sin enrutamiento inter-VLAN).
 
 ### Edificio A
 
@@ -333,8 +317,6 @@ Los trunks 802.1Q se configuraron en todos los enlaces switch-to-switch con las 
 | Docencia8 | 23 - DOCENTES | 192.168.23.7 | 255.255.255.0 |
 
 ### Edificio D
-
-> ⚠️ **PENDIENTE:** Se completará al finalizar la configuración del Edificio D (Fase 6).
 
 | Dispositivo | VLAN | Dirección IP | Máscara |
 |-------------|------|--------------|---------|
@@ -827,8 +809,6 @@ vtp password proyecto12026
 
 ## Pruebas de Conectividad
 
-> ⚠️ **PENDIENTE PARCIAL:** Las pruebas del Edificio D se completarán al finalizar la Fase 6.
-
 ### Pruebas exitosas (misma VLAN)
 
 > 📸 **IMAGEN REQUERIDA:** Captura del ping exitoso entre Laboratorio2 y Laboratorio4.  
@@ -866,14 +846,12 @@ vtp password proyecto12026
 | 6 | Biblioteca3 | 192.168.33.3 | Docencia7 | 192.168.23.6 | Diferente | ❌ Fallido |
 | 7 | Admin2 | 192.168.13.1 | Admin3 | 192.168.13.3 | 13 | ✅ Exitoso |
 | 8 | Admin2 | 192.168.13.1 | Biblioteca2 | 192.168.33.2 | Diferente | ❌ Fallido |
-| 9 | Visitantes1 | Por asignar | Visitantes2 | Por asignar | 53 | ⏳ Pendiente |
-| 10 | Visitantes1 | Por asignar | Admin4 | Por asignar | Diferente | ⏳ Pendiente |
+| 9 | Visitantes1 | Por asignar | Visitantes2 | Por asignar | 53 |  |
+| 10 | Visitantes1 | Por asignar | Admin4 | Por asignar | Diferente |  |
 
 ---
 
 ## Presupuesto Estimado
-
-> ⚠️ **PENDIENTE:** Se completará en la Fase 7.
 
 | Equipo | Cantidad | Precio Unitario (USD) | Total (USD) |
 |--------|----------|-----------------------|-------------|
