@@ -665,28 +665,19 @@ ip route 0.0.0.0 0.0.0.0 10.0.0.25
 
 #### Sede Occidente (desde PC-OCC-1, VLAN 13)
 
-> **[Captura requerida: ping desde PC-OCC-1 a 192.168.10.130 — VLAN 23]**
-> **[Captura requerida: ping desde PC-OCC-1 a 192.168.10.162 — VLAN 33]**
-> **[Captura requerida: ping desde PC-OCC-1 a 192.168.10.2 — VLAN 43]**
+![Topología Completa](img/11.png)
 
 #### Sede Norte (desde PC-NOR-1, VLAN 13)
 
-> **[Captura requerida: ping desde PC-NOR-1 a 192.168.20.66 — VLAN 23]**
-> **[Captura requerida: ping desde PC-NOR-1 a 192.168.20.82 — VLAN 33]**
-> **[Captura requerida: ping desde PC-NOR-1 a 192.168.20.34 — VLAN 43]**
+![Topología Completa](img/12.png)
 
 #### Sede Oriente (desde PC-ORI-1, VLAN 53)
 
-> **[Captura requerida: ping desde PC-ORI-1 a 192.168.30.68 — VLAN 23]**
-> **[Captura requerida: ping desde PC-ORI-1 a 192.168.30.100 — VLAN 33]**
-> **[Captura requerida: ping desde PC-ORI-1 a 192.168.30.36 — VLAN 43]**
+![Topología Completa](img/13.png)
 
 #### Sede Central (desde PC-CEN-1, VLAN 23)
 
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.40.146 — VLAN 33]**
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.40.2 — VLAN 63]**
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.40.130 — VLAN 73]**
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.40.98 — VLAN 83]**
+![Topología Completa](img/14.png)
 
 ---
 
@@ -694,27 +685,19 @@ ip route 0.0.0.0 0.0.0.0 10.0.0.25
 
 #### Desde Occidente hacia otras sedes (PC-OCC-1)
 
-> **[Captura requerida: ping desde PC-OCC-1 a 192.168.20.2 — Norte]**
-> **[Captura requerida: ping desde PC-OCC-1 a 192.168.30.4 — Oriente]**
-> **[Captura requerida: ping desde PC-OCC-1 a 192.168.40.66 — Central]**
+![Topología Completa](img/21.png)
 
 #### Desde Norte hacia otras sedes (PC-NOR-1)
 
-> **[Captura requerida: ping desde PC-NOR-1 a 192.168.10.66 — Occidente]**
-> **[Captura requerida: ping desde PC-NOR-1 a 192.168.30.4 — Oriente]**
-> **[Captura requerida: ping desde PC-NOR-1 a 192.168.40.66 — Central]**
+![Topología Completa](img/22.png)
 
 #### Desde Oriente hacia otras sedes (PC-ORI-1)
 
-> **[Captura requerida: ping desde PC-ORI-1 a 192.168.10.66 — Occidente]**
-> **[Captura requerida: ping desde PC-ORI-1 a 192.168.20.2 — Norte]**
-> **[Captura requerida: ping desde PC-ORI-1 a 192.168.40.66 — Central]**
+![Topología Completa](img/23.png)
 
 #### Desde Central hacia otras sedes (PC-CEN-1)
 
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.10.66 — Occidente]**
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.20.2 — Norte]**
-> **[Captura requerida: ping desde PC-CEN-1 a 192.168.30.4 — Oriente]**
+![Topología Completa](img/24.png)
 
 ---
 
